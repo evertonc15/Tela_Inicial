@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tela_inicial/utils/image.utils.dart';
 
 void main() {
   runApp(const MyApp());
@@ -46,7 +47,7 @@ class _LoginScreenState extends State<LoginScreen> {
            SizedBox(height: 20),
            CircleAvatar(
               radius: 50,
-              backgroundImage: AssetImage('assets/Perfil.png'),
+              backgroundImage: AssetImage(ImageUtils.IMG_PERFIL),
             ),
             SizedBox(height:20),
             TextField(
@@ -67,22 +68,31 @@ class _LoginScreenState extends State<LoginScreen> {
             SizedBox(height: 20),
             ElevatedButton(
               onPressed: () {},
-              style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.blue,
-                minimumSize: const Size(double.infinity, 50),
+              style: ButtonStyle(
+                fixedSize: WidgetStatePropertyAll(Size(350, 48)),
+                backgroundColor: WidgetStatePropertyAll(Colors.blue),
               ),
               child: Text('Entrar', style: TextStyle(fontSize: 16, color: Colors.white)),
               ),
-              SizedBox(height: 10),
+              SizedBox(height: 20),
               Text('Ou', style: TextStyle(fontSize: 16)),
-              SizedBox(height: 10),
+              SizedBox(height: 20),
               ElevatedButton(
                 onPressed: () {},
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.redAccent,
-                  minimumSize: Size(double.infinity, 50),
+                style: ButtonStyle(
+                  fixedSize: WidgetStatePropertyAll(Size(350, 48)),
+                  backgroundColor: WidgetStatePropertyAll(Colors.redAccent),
                 ),
-                child: Text('Recuperar conta', style: TextStyle(fontSize: 16, color: Colors.white)),
+                child: Text('Criar uma nova conta', style: TextStyle(fontSize: 16, color: Colors.white)),
+                ),
+                SizedBox(height: 20),
+              ElevatedButton(
+                onPressed: () {},
+                style: ButtonStyle(
+                  fixedSize: WidgetStatePropertyAll(Size(350, 48)),
+                  backgroundColor: WidgetStatePropertyAll(Colors.yellow),
+                ),
+                child: Text('Recuperar conta', style: TextStyle(fontSize: 16, color: Colors.black)),
                 ),
           ],
         ),
